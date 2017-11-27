@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+const PORT = process.env.PORT || 9000
+
 app.use(express.static('public'))
 
 const helpers = require("./helpers");
@@ -34,6 +36,6 @@ app.get("/:term/:size", (req, res) => {
     });
 });
 
-app.listen(process.env.port || 9000, console.log("Photo Ipsum is running on port 9000!"));
+app.listen(PORT, console.log("Photo Ipsum is running on port" + PORT + "!"));
 
 
