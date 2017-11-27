@@ -34,6 +34,6 @@ app.get("/:term/:size", (req, res) => {
     });
 });
 
-app.listen(9000, console.log("Photo Ipsum is running on port 9000!"));
+app.listen(process.env.port || 9000, console.log("Photo Ipsum is running on port 9000!"));
 
 
