@@ -89,8 +89,32 @@ h3{
 .photographer-credit{
     color:white;
     position: absolute;
-    bottom:20px;
+    bottom:30px;
     left:0;
     right:0;
     text-align: center;
 }
+
+@media (max-width: 1200px) {
+    .container{
+        flex-direction: column;
+        display: block;
+    }
+    
+    .brand-section{
+        height:100vh;
+    }
+
+    .info-section{
+        padding:20px;
+        padding-bottom: 60px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .photo-credit{
+        display:none;
+    }
+}    
