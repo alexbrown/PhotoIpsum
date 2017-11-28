@@ -41,7 +41,12 @@ function getPhotoWithTerm(size, term, callback){
     let url = buildUnsplashURL(size, term);
     request(url, (err, res, body) => {
         let data = JSON.parse(body);
-        callback(data.urls.custom);
+        if(data.urls && data.urls.custom){
+            callback(data.urls.custom);
+        } else {
+            callback("/homepage/img/no-image-found.png");
+        }
+        
     })
 }
 
